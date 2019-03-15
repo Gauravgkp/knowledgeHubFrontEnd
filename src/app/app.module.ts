@@ -11,6 +11,7 @@ import { ConceptsComponent } from './concepts/concepts.component';
 import { DeveloperTeamComponent } from './developer-team/developer-team.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
