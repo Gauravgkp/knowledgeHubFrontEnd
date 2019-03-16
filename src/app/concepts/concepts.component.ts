@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {WOW} from 'wowjs/dist/wow.min'
 @Component({
   selector: 'app-concepts',
   templateUrl: './concepts.component.html',
@@ -13,6 +13,7 @@ export class ConceptsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    new WOW().init();
   }
 
 }
