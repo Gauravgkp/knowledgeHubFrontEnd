@@ -5,6 +5,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ResultsComponent } from './results/results.component';
 import {AdminHomeComponent} from './admin-home/admin-home.component'
 import { ConceptsComponent } from './concepts/concepts.component';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
     path:"home",
@@ -34,8 +35,8 @@ const routes: Routes = [
   component:AdminHomeComponent
 },
 {
-  path:'concepts',
-  component:ConceptsComponent
+  path:'login',
+  component:LoginComponent
 }
 ];
 

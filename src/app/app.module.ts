@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +14,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { ResultsComponent } from './results/results.component';
-import {FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResultcardComponent } from './resultcard/resultcard.component';
 import { SocketService } from './services/socket.service';
 import { SearchinfoService } from './services/searchinfo.service';
@@ -23,7 +23,49 @@ import { SessionId } from './domain/sessionId';
 import { DataService } from './domain/data-service';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { TokenService } from './services/token.service';
+import { AuthService } from './services/auth.service';
+import { AuthInterceptor } from './services/auth-interceptor';
+import { LoginComponent } from './login/login.component';
 
+import {
+  MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatTreeModule,
+  MatInputModule,
+  MatIconModule,
+  MatButtonModule,
+  MatSelectModule,
+  
+} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,18 +80,61 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
     HomeComponent,
     ResultsComponent,
     ResultcardComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
- 
-    
+    HttpClientModule,
+    MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatTreeModule,
+  BrowserModule,
+  AppRoutingModule,
+  BrowserAnimationsModule,
+  MatInputModule,
+  MatIconModule,
+  MatButtonModule,
+  MatSelectModule,
+  HttpClientModule,
+  ReactiveFormsModule,
+  FormsModule,
+  BrowserModule.withServerTransition({ appId: 'serverApp' }),
+  BrowserTransferStateModule,
   ],
-  providers: [SocketService,SessionId,DataService],
+  providers: [SocketService,SessionId,DataService,TokenService,AuthService,AuthInterceptor],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

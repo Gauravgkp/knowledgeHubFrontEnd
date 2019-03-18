@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {WOW} from 'wowjs/dist/wow.min'
+import { Token } from '@angular/compiler/src/ml_parser/lexer';
+import { TokenService } from '../services/token.service';
 @Component({
   selector: 'app-admin-home',
   templateUrl: './admin-home.component.html',
@@ -9,11 +11,14 @@ import {WOW} from 'wowjs/dist/wow.min'
 '../../assets/conceptsLib/ionicons/css/ionicons.min.css','../../assets/conceptsLib/bootstrap/css/bootstrap.min.css']
 })
 export class AdminHomeComponent implements OnInit {
-
-  constructor() { }
+  tok:string;
+  constructor(private token:TokenService) { }
 
   ngOnInit() {
     new WOW().init();
+    this.tok=this.token.getToken();
+
+    }
   }
 
-}
+
