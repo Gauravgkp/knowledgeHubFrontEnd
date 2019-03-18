@@ -12,12 +12,12 @@ import { TokenService } from '../services/token.service';
 })
 export class AdminHomeComponent implements OnInit {
   tok:string;
-  constructor(private token:TokenService) { }
+  constructor(private token:TokenService) { 
+    this.tok=this.token.getToken();
+  }
 
   ngOnInit() {
-    new WOW().init();
-    this.tok=this.token.getToken();
-
+      new WOW().init();
     }
   }
 

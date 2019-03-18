@@ -66,6 +66,7 @@ import {
   MatSelectModule,
   
 } from '@angular/material';
+import { DisplayAdminHomeComponent } from './display-admin-home/display-admin-home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,7 +82,8 @@ import {
     ResultsComponent,
     ResultcardComponent,
     AdminHomeComponent,
-    LoginComponent
+    LoginComponent,
+    DisplayAdminHomeComponent
   ],
   imports: [
     BrowserModule,

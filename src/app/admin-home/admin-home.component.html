@@ -11,11 +11,10 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 </head>
 <body>
-  <div *ngIf="this.tok">
   <section id="services">
     <div class="container">
       <div class="section-header">
-        <h2>Services</h2>
+        <h2>Admin Activities</h2>
         <h6>Knowledge hub's components</h6>
       </div>
   
@@ -23,33 +22,33 @@
   
         <div class="col-lg-6">
           <div class="box wow fadeInLeft">
-            <div class="icon"><i class="fa fa-tree"></i></div>
-            <h4 class="title"><a href="">Ontology</a></h4>
-            <p class="description">A set of concepts and categories in a subject area or domain that shows their properties and the relations between them.</p>
+            <div class="icon"><i class="fa fa-link"></i></div>
+            <h4 class="title"><a href="">Add concept links</a></h4>
+            <p class="description">Add conceptNames to populate ontology with links.</p>
           </div>
         </div>
   
         <div class="col-lg-6">
           <div class="box wow fadeInRight">
             <div class="icon"><i class="fa fa-database"></i></div>
-            <h4 class="title"><a href="">Neo4j</a></h4>
-            <p class="description">Neo4j is the world's leading open source Graph Database which is developed using Java technology. It is highly scalable and schema free (NoSQL).</p>
+            <h4 class="title"><a href="">Modify Neo4j</a></h4>
+            <p class="description">Modify the neo4j i.e add/delete/update the neo4j nodes.</p>
           </div>
         </div>
   
         <div class="col-lg-6">
           <div class="box wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-            <h4 class="title"><a href="">NLP</a></h4>
-            <p class="description">Natural language processing (NLP) is a  and information engineering concerned with the interactions between computers and human languages.</p>
+            <div class="icon"><i class="fa fa-question"></i></div>
+            <h4 class="title"><a href="">Classify Questions</a></h4>
+            <p class="description">Categorization of Questions according to bloom taxonomy.</p>
           </div>
         </div>
   
         <div class="col-lg-6">
           <div class="box wow fadeInRight" data-wow-delay="0.2s">
-            <div class="icon"><i class="fa fa-caret-up"></i></div>
-            <h4 class="title"><a href="">Bloom's taxonomy</a></h4>
-            <p class="description">Bloom's taxonomy is divided into five domains of educational activities: knowledge, comprihension, application, analysis, evaluation, sysnthesis. </p>
+            <div class="icon"><i class="fa fa-upload"></i></div>
+            <h4 class="title"><a href="">Upload file</a></h4>
+            <p class="description">Upload file to and fill the populate the data in neo4j Nodes. </p>
           </div>
         </div>
   
@@ -71,5 +70,4 @@
 
   <!-- Template Main Javascript File -->
   <script src="../../assets/conceptsTs/main.js"></script> 
-</div>
 </body>
