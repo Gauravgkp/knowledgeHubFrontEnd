@@ -26,6 +26,9 @@ export class AdminHomeComponent implements OnInit {
     uploadFile(){
       
     }
+    addDomainConceptNames(){
+      this.router.navigate(['/addDomainConceptNames']);
+    }
   }
 
 

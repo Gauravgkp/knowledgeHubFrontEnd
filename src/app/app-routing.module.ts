@@ -8,6 +8,8 @@ import { ConceptsComponent } from './concepts/concepts.component';
 import { LoginComponent } from './login/login.component';
 import { DisplayAdminHomeComponent } from './display-admin-home/display-admin-home.component';
 import { QuestionClassifyComponent } from './question-classify/question-classify.component';
+import { DomainConceptNameService } from './services/domain-concept-name.service';
+import { DomainConceptComponent } from './domain-concept/domain-concept.component';
 const routes: Routes = [
   {
     path:"home",
@@ -47,6 +49,10 @@ const routes: Routes = [
 {
   path:'showNlpQuestions',
   component:QuestionClassifyComponent
+},
+{
+  path:'addDomainConceptNames',
+  component:DomainConceptComponent
 }
 ];
 

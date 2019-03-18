@@ -68,6 +68,7 @@ import {
 } from '@angular/material';
 import { DisplayAdminHomeComponent } from './display-admin-home/display-admin-home.component';
 import { QuestionClassifyComponent } from './question-classify/question-classify.component';
+import { DomainConceptComponent } from './domain-concept/domain-concept.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,7 +86,8 @@ import { QuestionClassifyComponent } from './question-classify/question-classify
     AdminHomeComponent,
     LoginComponent,
     DisplayAdminHomeComponent,
-    QuestionClassifyComponent
+    QuestionClassifyComponent,
+    DomainConceptComponent
   ],
   imports: [
     BrowserModule,
