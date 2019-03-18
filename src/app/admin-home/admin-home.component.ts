@@ -3,6 +3,8 @@ import {WOW} from 'wowjs/dist/wow.min'
 import { Token } from '@angular/compiler/src/ml_parser/lexer';
 import { TokenService } from '../services/token.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { UploadComponent } from '../upload/upload.component';
 @Component({
   selector: 'app-admin-home',
   templateUrl: './admin-home.component.html',
@@ -13,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class AdminHomeComponent implements OnInit {
   tok:string;
-  constructor(private token:TokenService,private router:Router) { 
+  constructor(private token:TokenService,private router:Router,private dialog:MatDialog) { 
     this.tok=this.token.getToken();
   }
 
@@ -24,7 +26,7 @@ export class AdminHomeComponent implements OnInit {
         this.router.navigate(['/showNlpQuestions']);
     }
     uploadFile(){
-      
+      this.dialog.open(UploadComponent)
     }
   }
 

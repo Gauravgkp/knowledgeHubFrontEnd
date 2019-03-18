@@ -8,6 +8,7 @@ import { ConceptsComponent } from './concepts/concepts.component';
 import { LoginComponent } from './login/login.component';
 import { DisplayAdminHomeComponent } from './display-admin-home/display-admin-home.component';
 import { QuestionClassifyComponent } from './question-classify/question-classify.component';
+import { UploadComponent } from './upload/upload.component';
 const routes: Routes = [
   {
     path:"home",
@@ -47,6 +48,10 @@ const routes: Routes = [
 {
   path:'showNlpQuestions',
   component:QuestionClassifyComponent
+},
+{
+  path:'uploadFile',
+  component:UploadComponent
 }
 ];
 
