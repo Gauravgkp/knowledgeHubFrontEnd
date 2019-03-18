@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocketService } from '../services/socket.service';
 
 @Component({
   selector: 'app-about-us',
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private socket:SocketService) { }
 
   ngOnInit() {
   }
