@@ -7,6 +7,7 @@ import {AdminHomeComponent} from './admin-home/admin-home.component'
 import { ConceptsComponent } from './concepts/concepts.component';
 import { LoginComponent } from './login/login.component';
 import { DisplayAdminHomeComponent } from './display-admin-home/display-admin-home.component';
+import { QuestionClassifyComponent } from './question-classify/question-classify.component';
 const routes: Routes = [
   {
     path:"home",
@@ -42,6 +43,10 @@ const routes: Routes = [
 {
   path:'login',
   component:LoginComponent
+},
+{
+  path:'showNlpQuestions',
+  component:QuestionClassifyComponent
 }
 ];
 
