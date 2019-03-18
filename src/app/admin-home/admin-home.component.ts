@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {WOW} from 'wowjs/dist/wow.min'
 import { Token } from '@angular/compiler/src/ml_parser/lexer';
 import { TokenService } from '../services/token.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-admin-home',
   templateUrl: './admin-home.component.html',
@@ -12,12 +13,18 @@ import { TokenService } from '../services/token.service';
 })
 export class AdminHomeComponent implements OnInit {
   tok:string;
-  constructor(private token:TokenService) { 
+  constructor(private token:TokenService,private router:Router) { 
     this.tok=this.token.getToken();
   }
 
   ngOnInit() {
       new WOW().init();
+    }
+    showNlpQuestions(){
+        this.router.navigate(['/showNlpQuestions']);
+    }
+    uploadFile(){
+      
     }
   }
 
