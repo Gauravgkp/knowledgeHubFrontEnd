@@ -10,6 +10,7 @@ import { DisplayAdminHomeComponent } from './display-admin-home/display-admin-ho
 import { QuestionClassifyComponent } from './question-classify/question-classify.component';
 import { DomainConceptNameService } from './services/domain-concept-name.service';
 import { DomainConceptComponent } from './domain-concept/domain-concept.component';
+import { UploadComponent } from './upload/upload.component';
 const routes: Routes = [
   {
     path:"home",
@@ -53,6 +54,10 @@ const routes: Routes = [
 {
   path:'addDomainConceptNames',
   component:DomainConceptComponent
+},
+{
+  path:'uploadFile',
+  component:UploadComponent
 }
 ];
 

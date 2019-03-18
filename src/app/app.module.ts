@@ -1,6 +1,10 @@
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import {A11yModule} from '@angular/cdk/a11y';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import {CdkStepperModule} from '@angular/cdk/stepper';
+import { FileDropModule } from 'ngx-file-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -27,6 +31,7 @@ import { TokenService } from './services/token.service';
 import { AuthService } from './services/auth.service';
 import { AuthInterceptor } from './services/auth-interceptor';
 import { LoginComponent } from './login/login.component';
+import { UploadComponent } from './upload/upload.component';
 
 import {
   MatAutocompleteModule,
@@ -87,7 +92,8 @@ import { DomainConceptComponent } from './domain-concept/domain-concept.componen
     LoginComponent,
     DisplayAdminHomeComponent,
     QuestionClassifyComponent,
-    DomainConceptComponent
+    DomainConceptComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -135,6 +141,7 @@ import { DomainConceptComponent } from './domain-concept/domain-concept.componen
   MatSelectModule,
   HttpClientModule,
   ReactiveFormsModule,
+  FileDropModule,
   FormsModule,
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
   BrowserTransferStateModule,
