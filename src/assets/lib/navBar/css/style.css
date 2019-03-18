@@ -406,6 +406,11 @@ section.section {
 	margin-top: -5px !important;
 }
 
+.company-name{
+	font-size: 40px;
+	color: white;
+}
+
 /*===========================
   --- Intro ----
 =========================== */
