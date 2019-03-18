@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ResultsComponent } from './results/results.component';
-
+import {AdminHomeComponent} from './admin-home/admin-home.component'
+import { ConceptsComponent } from './concepts/concepts.component';
 const routes: Routes = [
   {
     path:"home",
@@ -27,6 +28,14 @@ const routes: Routes = [
   path:'search',
 
   component: SearchBarComponent
+},
+{
+  path:'adminHome',
+  component:AdminHomeComponent
+},
+{
+  path:'concepts',
+  component:ConceptsComponent
 }
 ];
 

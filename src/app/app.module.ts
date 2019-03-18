@@ -22,6 +22,7 @@ import { SearchinfoService } from './services/searchinfo.service';
 import { SessionId } from './domain/sessionId';
 import { DataService } from './domain/data-service';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     SearchBarComponent,
     HomeComponent,
     ResultsComponent,
-    ResultcardComponent
+    ResultcardComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule,
