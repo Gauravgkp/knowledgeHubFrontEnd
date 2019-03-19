@@ -186,7 +186,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #team {
   background: #fff;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 #team .member {
@@ -194,6 +194,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 20px;
   background: #000;
   position: relative;
+  
 }
 
 #team .member .member-info {
@@ -216,11 +217,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   left: 0;
   right: 0;
   transition: 0.2s;
+
 }
 
 #team .member .member-info-content {
   margin-top: -50px;
   transition: margin 0.2s;
+
 }
 
 #team .member:hover .member-info {
@@ -239,6 +242,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 2px;
   font-size: 18px;
   color: #fff;
+
 }
 
 #team .member span {
@@ -246,6 +250,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   font-size: 13px;
   color: #fff;
+
 }
 
 #team .member .social {
@@ -265,6 +270,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 18px;
   margin: 0 2px;
 }
+
 
 /*--------------------------------------------------------------
 # Responsive Media Queries
