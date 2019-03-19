@@ -200,7 +200,17 @@
     autoplay: true,
     dots: true,
     loop: true,
-    items: 1
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      900: {
+        items: 3
+      }
+    }
   });
 
 })(jQuery);
