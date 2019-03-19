@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { LoginComponent } from '../login/login.component';
+import { DataService } from '../domain/data-service';
+import { TokenService } from '../services/token.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -22,12 +25,22 @@ import { LoginComponent } from '../login/login.component';
 ]
 })
 export class FooterComponent implements OnInit {
-
-  constructor(private dialog:MatDialog) { }
+adminLogin:string;
+  constructor(private dialog:MatDialog,private data:DataService,private token:TokenService,private router:Router) { }
 
   ngOnInit() {
+    this.adminLogin=this.data.login;
   }
 login(){
+  if(!this.token.getToken()){
   this.dialog.open(LoginComponent);
+  }
+else{
+  
+    this.token.signout();
+    this.data.login="Admin Login";
+    this.adminLogin = this.data.login;
+    this.router.navigate(['/home'])
+}
 }
 }

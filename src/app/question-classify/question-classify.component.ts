@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuestionProviderService } from '../services/question-provider.service';
 import { QueryQuestions } from './QueryQuestions';
 import { QuestionPublisherService } from '../services/question-publisher.service';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-question-classify',
@@ -18,7 +19,7 @@ export class QuestionClassifyComponent implements OnInit {
   private questions: QueryQuestions[] = [];
   private currentQuestion: string;
   private currentQuestionObject: QueryQuestions;
-  constructor(private questionProvider: QuestionProviderService,private questionPublisher:QuestionPublisherService) {
+  constructor(public token:TokenService,private questionProvider: QuestionProviderService,private questionPublisher:QuestionPublisherService) {
 
   }
   ngOnInit(): void {
