@@ -31,6 +31,10 @@ export class AdminHomeComponent implements OnInit {
     addDomainConceptNames(){
       this.router.navigate(['/addDomainConceptNames']);
     }
+
+    modifyNeo4j(){
+      this.router.navigate(['/modifyNeo4j']);
+    }
   }
 
 

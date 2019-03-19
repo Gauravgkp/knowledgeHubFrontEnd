@@ -11,6 +11,7 @@ import { QuestionClassifyComponent } from './question-classify/question-classify
 import { DomainConceptNameService } from './services/domain-concept-name.service';
 import { DomainConceptComponent } from './domain-concept/domain-concept.component';
 import { UploadComponent } from './upload/upload.component';
+import { NodeComponent } from './neo4j-node/neo4j-node.component';
 const routes: Routes = [
   {
     path:"home",
@@ -58,6 +59,9 @@ const routes: Routes = [
 {
   path:'uploadFile',
   component:UploadComponent
+},{
+  path:'modifyNeo4j',
+  component:NodeComponent
 }
 ];
 

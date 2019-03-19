@@ -74,6 +74,8 @@ import {
 import { DisplayAdminHomeComponent } from './display-admin-home/display-admin-home.component';
 import { QuestionClassifyComponent } from './question-classify/question-classify.component';
 import { DomainConceptComponent } from './domain-concept/domain-concept.component';
+import {NodeComponent } from './neo4j-node/neo4j-node.component';
+import { TermComponent } from './neo4j-term/neo4j-term.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,7 +95,9 @@ import { DomainConceptComponent } from './domain-concept/domain-concept.componen
     DisplayAdminHomeComponent,
     QuestionClassifyComponent,
     DomainConceptComponent,
-    UploadComponent
+    UploadComponent,
+    NodeComponent,
+    TermComponent
   ],
   imports: [
     BrowserModule,
