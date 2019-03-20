@@ -44,8 +44,8 @@
                     <br>
 
                     <div class="align-fields" [hidden]="!openProperty">
-                        <!-- <br> -->
-                        <select [(ngModel)]="newAttribute.property" name="newAttributeProperty" >
+                        <br>
+                        <select [(ngModel)]="newAttribute.property" class="form-control"name="newAttributeProperty" >
                                 <option>parent</option>
                             </select>                        <input class="padding" type="text" id="newAttributeValue" [(ngModel)]="newAttribute.value" name="newAttributeValue" />
                         <button class="btn padding" type="button" (click)="addFieldValue()"> Add </button>
@@ -87,8 +87,8 @@
                     </div> -->
 
                     <div class="align-fields" [hidden]="!openProperty">
-                            <!-- <br> -->
-                            <select [(ngModel)]="newAttribute.property" name="newAttributeProperty" >
+                            <br>
+                            <select [(ngModel)]="newAttribute.property" class="form-control"name="newAttributeProperty" >
                                     <option>parent_node_type</option>
                                     <option>weight</option>
                                 </select>

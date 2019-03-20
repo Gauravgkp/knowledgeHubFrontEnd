@@ -46,6 +46,7 @@ export class NodeComponent implements OnInit {
 
   selected(){
     this.data=this.selectedLevel;
+    this.fieldArray.length=0;
     // this.field.property='';
   }
   
