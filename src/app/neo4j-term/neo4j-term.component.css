@@ -12,3 +12,14 @@ button
 {
     margin-left:5px;
 }
+
+.form-control{
+    margin-left: 10px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.synonym{
+
+    width:140px;
+}

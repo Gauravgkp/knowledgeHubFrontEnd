@@ -21,6 +21,7 @@ import { ResultsComponent } from './results/results.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResultcardComponent } from './resultcard/resultcard.component';
 import { SocketService } from './services/socket.service';
+import {MatButtonModule, MatButton} from '@angular/material/button';
 import { SearchinfoService } from './services/searchinfo.service';
 // import { UploadService } from './services/upload.service';
 import { SessionId } from './domain/sessionId';
@@ -67,7 +68,6 @@ import {
   MatTreeModule,
   MatInputModule,
   MatIconModule,
-  MatButtonModule,
   MatSelectModule,
   
 } from '@angular/material';
@@ -106,7 +106,9 @@ import { TermComponent } from './neo4j-term/neo4j-term.component';
     FormsModule,
     HttpClientModule,
     MatAutocompleteModule,
+    MatButtonModule,
   MatBadgeModule,
+  MatButtonModule,
   MatBottomSheetModule,
   MatButtonToggleModule,
   MatCardModule,
@@ -152,6 +154,7 @@ import { TermComponent } from './neo4j-term/neo4j-term.component';
   ],
   providers: [SocketService,SessionId,DataService,TokenService,AuthService,AuthInterceptor],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[TermComponent]
 })
 export class AppModule { }

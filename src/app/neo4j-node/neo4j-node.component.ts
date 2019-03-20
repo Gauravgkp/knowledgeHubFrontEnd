@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { Observable } from 'rxjs';
+import {WOW} from 'wowjs/dist/wow.min'
 import { Intents } from '../intent';
 import { TermComponent } from '../neo4j-term/neo4j-term.component';
 import { Neo4jService } from '../services/neo4j.service';
@@ -8,7 +9,10 @@ import { Neo4jService } from '../services/neo4j.service';
 @Component({
   selector: 'app-neo4j-node',
   templateUrl: './neo4j-node.component.html',
-  styleUrls: ['./neo4j-node.component.css']
+  styleUrls: ['./neo4j-node.component.css','../../assets/conceptsLib/font-awesome/css/font-awesome.min.css',
+  '../../assets/conceptsLib/animate/animate.min.css','../../assets/conceptsLib/ionicons/css/ionicons.min.css',
+  '../../assets/conceptsLib/owlcarousel/assets/owl.carousel.min.css','../../assets/conceptsLib/magnific-popup/magnific-popup.css',
+'../../assets/conceptsLib/ionicons/css/ionicons.min.css','../../assets/conceptsLib/bootstrap/css/bootstrap.min.css']
 })
 export class NodeComponent implements OnInit {
   openform: boolean;
@@ -25,11 +29,14 @@ export class NodeComponent implements OnInit {
   bloomstack:string;
   msg:any;
   msg1: string;
+  hide:string;
+  getTerms1: boolean;
 
   constructor(private formService:Neo4jService,public dialog:MatDialog) { }
 
   ngOnInit() {
-    
+    this.hide='hide';
+    new WOW().init();
   }
 
   onClickOpenForm(){
@@ -38,14 +45,37 @@ export class NodeComponent implements OnInit {
 
   onClickOpenConceptForm(){
     this.openConcept=true;
+    this.openIntent=false;
+    this.getTerms1=false;
+    this.openProperty=false;
+    this.fieldArray.length=0;
+    this.hide='hide';
+    this.intents=null;
+    this.bloomstack=null;
   } 
 
   onClickOpenIntentForm(){
     this.openIntent=true;
+    this.openProperty=false;
+    this.hide='hide';
+    this.intents=null;
+    this.bloomstack=null;
+    this.openConcept=false;
+    this.getTerms1=false;
+    this.fieldArray.length=0;
+  }
+
+  onClickOpenTerms(){
+    this.getTerms1=true;
+    this.openIntent=false;
+    this.openConcept=false;
+    this.fieldArray.length=0;
   }
 
   selected(){
     this.data=this.selectedLevel;
+    this.fieldArray.length=0;
+    this.openProperty=false;
     // this.field.property='';
   }
   
@@ -103,35 +133,61 @@ createIntent(form) {
 
 
 onClickShowKnowledge(){
-  this.bloomstack="knowledge";
+  if(this.hide=='hide'){
+  this.bloomstack="Knowledge";
+  this.hide='open'
   this.intents = this.formService.getKnowledgeTerms();
-  console.log(this.intents);
+  console.log(this.intents);}
+  else{this.intents=null
+     this.hide='hide'
+  }
 }
 onClickShowSynthesis(){
+  if(this.hide=='hide'){
   this.bloomstack="Synthesis";
+  this.hide='open'
   this.intents = this.formService.getSynthesisTerms();
-  console.log(this.intents);
+  console.log(this.intents);}
+  else{this.intents=null
+    this.hide='hide'}
 }
+
 onClickShowComprehension(){
+  if(this.hide=='hide'){
   this.bloomstack="Comprehension";
+  this.hide='open'
   this.intents = this.formService.getComprehensionTerms();
-  console.log(this.intents);
+  console.log(this.intents);}
+  else{this.intents=null
+    this.hide='hide'}
 }
 onClickShowAnaylsis(){
-  this.bloomstack="Analysis";
-  this.intents = this.formService.getAnalysisTerms();
-  console.log(this.intents);
-}
+  if(this.hide=='hide'){
+    this.bloomstack="Analysis";
+    this.hide='open'
+    this.intents = this.formService.getAnalysisTerms();
+  console.log(this.intents);}
+  else{this.intents=null
+    this.hide='hide'}
+  }
 onClickShowApplication(){
-  this.bloomstack="Application";
-  this.intents = this.formService.getApplicationTerms();
-  console.log(this.intents);
-}
+  if(this.hide=='hide'){
+    this.bloomstack="Application";
+    this.hide='open'
+    this.intents = this.formService.getApplicationTerms();
+  console.log(this.intents);}
+  else{this.intents=null
+    this.hide='hide'}
+  }
 onClickShowEvaluation(){
-  this.bloomstack="Evaluation";
-  this.intents = this.formService.getEvaluationTerms();
-  console.log(this.intents);
-}
+  if(this.hide=='hide'){
+    this.bloomstack="Evaluation";
+    this.hide='open'
+    this.intents = this.formService.getEvaluationTerms();
+    console.log(this.intents);}
+    else{this.intents=null
+    this.hide='hide'}
+  }
 
 // getSynonym(terms:String){
 

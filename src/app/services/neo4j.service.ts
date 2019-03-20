@@ -17,13 +17,13 @@ export class Neo4jService  {
 
   createNode(name,parent){
 
-    this._url="http://localhost:8080/createConcept/"+parent+"/"+name+"/";
+    this._url="http://localhost:8071/createConcept/"+parent+"/"+name+"/";
     console.log(this._url);
     return this.http.get(this._url,{responseType: 'text' as 'text' });
   }
   createIntent(name,intent,weight){
     console.log(name,intent,weight);
-    this._url="http://localhost:8080/insertTerm/"+intent+"/"+name+"/"+weight+"/";
+    this._url="http://localhost:8071/insertTerm/"+intent+"/"+name+"/"+weight+"/";
     console.log(this._url,);
 
     return this.http.get(this._url,{responseType: 'text' as 'text' });
@@ -31,45 +31,45 @@ export class Neo4jService  {
 
   getNodes():Observable<Concepts[]>{
 
-    this.url="http://localhost:8080/getnodes";
+    this.url="http://localhost:8071/getnodes";
     return this.http.get<Concepts[]>(this.url);
   }
 
 
   getKnowledgeTerms():Observable<Intents[]>{
-    this.url="http://localhost:8080/getIntentTerms/knowledge";
+    this.url="http://localhost:8071/getIntentTerms/knowledge";
     return this.http.get<Intents[]>(this.url);
   }
 
   getComprehensionTerms():Observable<Intents[]>{
-    this.url="http://localhost:8080/getIntentTerms/comprehension";
+    this.url="http://localhost:8071/getIntentTerms/comprehension";
     return this.http.get<Intents[]>(this.url);
   } 
   getAnalysisTerms():Observable<Intents[]>{
-    this.url="http://localhost:8080/getIntentTerms/analysis";
+    this.url="http://localhost:8071/getIntentTerms/analysis";
     return this.http.get<Intents[]>(this.url);
   }
    getApplicationTerms():Observable<Intents[]>{
-    this.url="http://localhost:8080/getIntentTerms/application";
+    this.url="http://localhost:8071/getIntentTerms/application";
     return this.http.get<Intents[]>(this.url);
   }
    getSynthesisTerms():Observable<Intents[]>{
-    this.url="http://localhost:8080/getIntentTerms/synthesis";
+    this.url="http://localhost:8071/getIntentTerms/synthesis";
     return this.http.get<Intents[]>(this.url);
   } 
   getEvaluationTerms():Observable<Intents[]>{
-    this.url="http://localhost:8080/getIntentTerms/evaluation";
+    this.url="http://localhost:8071/getIntentTerms/evaluation";
     return this.http.get<Intents[]>(this.url);
   }
   getSynonyms(terms:String){
 
-    this.url="http://localhost:8080/"+terms;
+    this.url="http://localhost:8071/"+terms;
     return this.http.get<[]>(this.url);
   }
 
   addSynonym(intent:String,term:String,synonym:String,score:String){
     console.log(intent,term,synonym,score);
-    this._url="http://localhost:8080/insertTerm/"+intent+"/"+synonym+"/"+score+"/";
+    this._url="http://localhost:8071/insertTerm/"+intent+"/"+synonym+"/"+score+"/";
     console.log(this._url);
     return this.http.get(this._url, {responseType: 'text' as 'text' });  }
 
