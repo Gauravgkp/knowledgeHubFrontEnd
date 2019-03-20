@@ -13,6 +13,7 @@ body{
     height:auto;
     min-height:100vh;
     width: 100%;
+<<<<<<< HEAD
     background-color: rgb(89, 212, 186);
     /* font-family: sansation; */
     position: relative;
@@ -22,6 +23,10 @@ body{
 
 .add-width{
   padding-left: 110px;
+=======
+    background-image:url(/assets/img/image.jpg);
+    font-family: sansation;
+>>>>>>> a7bd1fc68af4d527d41c9efbc4a9128679687dd1
 }
 
 /* .align-fields{
@@ -36,14 +41,25 @@ body{
 } */
 /* 
 label{
+<<<<<<< HEAD
     color:black;
 } */
+=======
+    color: white;
+}
+>>>>>>> a7bd1fc68af4d527d41c9efbc4a9128679687dd1
 
 /* .text-color
 {
+<<<<<<< HEAD
     color:black;
 } */
 /* 
+=======
+    color: white;
+}
+
+>>>>>>> a7bd1fc68af4d527d41c9efbc4a9128679687dd1
 .align-buttons{
     margin-left: 20px;
 } */

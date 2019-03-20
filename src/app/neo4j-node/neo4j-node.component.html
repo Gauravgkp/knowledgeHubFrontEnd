@@ -34,12 +34,21 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <div class="col-md-4">
                         <div class="box wow fadeInDown">
                             <!-- <div class="icon"><i class="fa fa-database"></i></div> -->
                             <h4 class="title"><a (click)="onClickOpenIntentForm()">Add Intent Nodes</a></h4>
                             <p class="description">Add intent nodes to the neo4j graph</p>
                         </div>
+=======
+                    <div class="align-fields" [hidden]="!openProperty">
+                        <br>
+                        <select [(ngModel)]="newAttribute.property" class="form-control"name="newAttributeProperty" >
+                                <option>parent</option>
+                            </select>                        <input class="padding" type="text" id="newAttributeValue" [(ngModel)]="newAttribute.value" name="newAttributeValue" />
+                        <button class="btn padding" type="button" (click)="addFieldValue()"> Add </button>
+>>>>>>> a7bd1fc68af4d527d41c9efbc4a9128679687dd1
                     </div>
 
                     <div class="col-md-4">
@@ -121,11 +130,29 @@
                             <select class="form-control input-lg" [(ngModel)]="newAttribute.property" name="newAttributeProperty">
                                 <option>parent_node_type</option>
                                 <option>weight</option>
+<<<<<<< HEAD
                             </select>
                         </div>&nbsp;
                         <div class="col-sm-4">
                             <input class="form-control input-lg" type="text" placeholder="Enter Property data" id="newAttributeValue"
                                 [(ngModel)]="newAttribute.value" name="newAttributeValue" />
+=======
+                            </select> 
+                         <input type="text" id="newAttributeProperty" [(ngModel)]="newAttribute.property" name="newAttributeProperty" /> 
+                        <input class="padding" type="text" id="newAttributeValue" [(ngModel)]="newAttributeProperty.value" name="newAttributeValue" />
+                        <button class="btn padding" type="button" (click)="addFieldValue()"> Add </button>
+                    </div> -->
+
+                    <div class="align-fields" [hidden]="!openProperty">
+                            <br>
+                            <select [(ngModel)]="newAttribute.property" class="form-control"name="newAttributeProperty" >
+                                    <option>parent_node_type</option>
+                                    <option>weight</option>
+                                </select>
+                            <!-- <input type="text" id="newAttributeProperty" [(ngModel)]="newAttribute.property" name="newAttributeProperty" /> -->
+                            <input class="padding" type="text" id="newAttributeValue" [(ngModel)]="newAttribute.value" name="newAttributeValue" />
+                            <button class="btn padding" type="button" (click)="addFieldValue()"> Add </button>
+>>>>>>> a7bd1fc68af4d527d41c9efbc4a9128679687dd1
                         </div>
                         <button class="btn btn-default" mat-raised-button type="button" (click)="addFieldValue()">
                             Add </button>

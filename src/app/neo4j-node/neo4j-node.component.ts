@@ -75,7 +75,10 @@ export class NodeComponent implements OnInit {
   selected(){
     this.data=this.selectedLevel;
     this.fieldArray.length=0;
+<<<<<<< HEAD
     this.openProperty=false;
+=======
+>>>>>>> a7bd1fc68af4d527d41c9efbc4a9128679687dd1
     // this.field.property='';
   }
   
