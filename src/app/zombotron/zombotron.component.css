@@ -40,12 +40,12 @@
     margin: 10px;
     color: #fff;
     text-decoration: none;
-      background: #85b0be;
+      background: #a0a3a7;
   }
   
   .btn-get-started:hover {
       color: #fff;
-      background: #699aaa;
+      background: #616263;
   }
 
 @media (max-width: 767px) {
@@ -59,8 +59,8 @@
 
 #intro {
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   position: relative;
-  background-image: url("/assets/img/intro-background.jpg") ;
+  background-image: url("src/assets/img/backgroundImage.png") ;
   background-size: cover;
 }
