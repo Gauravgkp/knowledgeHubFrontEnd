@@ -22,21 +22,50 @@ export class SocketService {
   initializeWebSocketConnection() {
  
     let id = this.sessionId+"";
-    const socket = new SockJS('http://localhost:8097/socket');
+    const socket = new SockJS('https://localhost:8097/socket');
     this.stompClient = Stomp.over(socket);
 
     const _this = this;
     this.stompClient.connect({}, function (frame) {
       _this.stompClient.subscribe("/topic/public/"+id, (message) => {
         var res = JSON.parse(message.body);
-        res.forEach(element => {
-          _this.show(element);
+        var result = res.result;
+        var webres = res.webResult;
+        var nlp = res.nlpResultFrequencies;
+        var rec = res.recommendations;
+        var searchfreq = res.searchFrequencies;
+        result.forEach(element => {
+          _this.result(element);
         });
+        webres.forEach(element => {
+          _this.webresult(element);
+        });
+        // nlp.forEach(element => {
+        //   _this.nlp(element);
+        // });
+        // rec.forEach(element => {
+        //   _this.rec(element);
+        // });
+        // searchfreq.forEach(element => {
+        //   _this.searchfreq(element);
+        // });
       });
     });
   }
-  show(name){
-    this.SessionIdNew.greetings.push(name);
+  result(name){
+    this.SessionIdNew.pdfresult.push(name);
+  }
+  webresult(web){
+    this.SessionIdNew.webresult.push(web);
+  }
+  nlp(nlp){
+    this.SessionIdNew.nlpresult.push(nlp);
+  }
+  rec(rec){
+    this.SessionIdNew.recommendation.push(rec);
+  }
+  searchfreq(search){
+    this.SessionIdNew.searchfreq.push(search)
   }
 
 IDGenerator() {
